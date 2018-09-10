@@ -58,12 +58,6 @@
 \RequirePackage{textcase}
 \RequirePackage{etoolbox}
 
-\usepackage{epsfig} %% for loading postscript figures
-\usepackage{graphicx}	%%standard format for loading figures
-\usepackage[dvipsnames]{xcolor}	%formatting figures
-\usepackage{ amssymb }
-%\usepackage[tight,nooneline,FIGTOPCAP]{subfigure}	%subfigure format
-
 \newenvironment{singlespace}{\baselineskip=0.0em}{\ifdouble@space\doublespacenormalsize\fi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Post-package-loading fixups.

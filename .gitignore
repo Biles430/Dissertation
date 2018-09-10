@@ -1,0 +1,9 @@
+#denotes what files to exclude from backup
+*.aux
+*.bbl
+*.blg
+*.lof
+*.lot
+*.out
+*.nlo
+

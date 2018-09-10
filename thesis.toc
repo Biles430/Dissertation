@@ -1,0 +1,27 @@
+\contentsline {FrontMatter}{\MakeTextUppercase {Acknowledgments}}{v}{chapter*.2}
+\contentsline {FrontMatter}{\MakeTextUppercase {Nomenclature}}{viii}{section*.4}
+\contentsline {FrontMatter}{\MakeUppercase {List of Tables}}{viii}{chapter*.5}
+\contentsline {FrontMatter}{\MakeUppercase {List of Figures}}{ix}{chapter*.6}
+\contentsline {FrontMatter}{\MakeTextUppercase {Abstract}}{x}{section*.7}
+\contentsline {Chapter}{\numberline {1.}\MakeUppercase {Introduction}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}High Reynolds number boundary layer studies}{2}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}From Paper}{3}{subsection.1.1.1}
+\contentsline {Chapter}{\numberline {2.}\MakeUppercase {Theory}}{8}{chapter.2}
+\contentsline {Chapter}{\numberline {3.}\MakeUppercase {Theory}}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Foil Design}{11}{section.3.1}
+\contentsline {Chapter}{\numberline {4.}\MakeUppercase {NEAT Boundary Layer Wind Tunnel}}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}Experimental Facility}{12}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}General Description}{12}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Inlet Section}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Thermal wall-plate}{14}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Rotor-Stator Assembly}{16}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Validation Tests}{17}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Measurement Methods}{17}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}ZPG turbulent boundary layer flow over an isothermal wall plate}{19}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}ZPG boundary layer encountering a sharp step in wall temperature}{21}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}ZPG turbulent boundary layer flow around a wall mounted hemisphere body}{23}{subsection.4.2.4}
+\contentsline {Chapter}{\numberline {5.}\MakeUppercase {Theory}}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Foil Design}{27}{section.5.1}
+\contentsline {BackMatter}{\MakeUppercase {Bibliography}}{28}{chapter*.16}
+\contentsline {Appendix}{\numberline {A.}\MakeUppercase {Numerical Test-Bed}}{29}{appendix.A}
+\contentsline {Appendix}{\numberline {B.}\MakeUppercase {More extra stuff}}{30}{appendix.B}
