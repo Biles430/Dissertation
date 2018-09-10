@@ -1,0 +1,181 @@
+\documentclass[11pt]{article}
+%%% INCLUDE PACKAGES %%%
+%set font
+\usepackage{times}
+%equation and math function
+\usepackage{amsmath}
+\RequirePackage{fix-cm}
+%include figures
+\usepackage{graphicx}
+%include basic latex symbols
+\usepackage{latexsym}
+\usepackage{float}
+%convert eps figure files
+\usepackage{epstopdf}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{thebibliography}{\linespread{1}\selectfont}
+\linespread{1.5}
+%set margins
+\usepackage[margin=1in]{geometry}
+%include color
+\usepackage{xcolor}
+%include pdf in appendix
+\usepackage{pdfpages}
+%include shapes
+\usepackage{tikz}
+%include subfigures
+\usepackage[tight,nooneline,FIGTOPCAP]{subfigure}
+
+%%set margins
+\usepackage[margin=1in]{geometry}
+
+%Website used for finding name of symbols
+%http://detexify.kirelabs.org/classify.html
+
+%%%	HEADER	%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Name, Document Title}
+\rhead{Page \thepage}
+
+
+%%%	TABLE EXAMPLE %%%
+%\begin{table}[H]
+%\label{1}
+%\centering
+%\begin{tabular}{|c|c|c|}
+%\hline 
+%Data Set & $\delta (m)$ & $\delta ^+$ \\ 
+%\hline 
+%1 & .0093 & 266.63 \\ 
+%\hline 
+%2 & .0123 & 343.85\\ 
+%\hline 
+%3 & .0290 & 665.63\\
+%\hline
+%4 & .0290 & 1252.8\\
+%\hline
+%5 & .0251 & 1561.1 \\
+%\hline
+%\end{tabular} 
+%\end{table}
+
+%%% FIGURE EXAMPLE %%%
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=.8]{inner.jpg}
+%\caption\footnotesize what is this figure??}
+%\label{fig:1}
+%\end{figure}
+
+%%SubFigures
+%\begin{figure}[H]
+%  \begin{center}
+%    {\subfigcapskip = -20pt \subfigcapmargin = -7pt \subfigure[]{\label{fig:edge-a}\includegraphics[scale=0.3]{FIGUREA}}}
+%   {\subfigcapskip = -20pt \subfigcapmargin = -7pt  \subfigure[]{\label{fig:edge-b}\includegraphics[scale=0.3]{FIGUREB}}}
+%     \end{center}
+%\caption{ \footnotesize (a) FigA descr. (b) FigB descr.}
+%\label{fig:1}
+%\end{figure}
+
+%%% EQN EXAMPLE %%%
+
+%\begin{equation}
+%k = \frac{\nu}{U_{\infty}^2}\frac{dU}{dx}
+%label{eqn:1}
+%\end{equation}
+
+%%Multi-line
+%\begin{equation}
+%\begin{gathered}
+%F=ma
+%\\
+%\frac{du}{dx}+\frac{dv}{dy}+\frac{dw}{dz}=0
+%\end{gathered}
+%\end{equation}
+
+%%% BULLET ITEMS %%%
+%\begin{itemize}
+%	\item A \\
+%	-subitem
+%	\item B
+%\end{itemize}
+
+%%% BIB %%%
+%\bibliographystyle{plain}
+%\bibliography{bib file}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+Dissertation Outline and To-Do list\\
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf abstract}
+\vspace{-.5cm}
+\newline
+\noindent\rule{8cm}{0.4pt}\\
+Already written from proposal, need to review and remove information about high Re work.
+Leave room at end to detail results of thermal pulsatile work.\\
+\vspace{.5cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf introduction}
+\vspace{-.5cm}
+\newline
+\noindent\rule{8cm}{0.4pt}\\
+Pulled introduction from proposal, needs to be reworked to remove high Re info.
+As work writing progresses dump references into intro chapter with brief summary to then expand on later.\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf theory}
+\vspace{-.5cm}
+\newline
+\noindent\rule{8cm}{0.4pt}
+\begin{itemize}
+\item Need to think about what this will contain and how it will differ from methods
+\item mean int method?
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf exp-methods}
+\vspace{-.5cm}
+\newline
+\noindent\rule{8cm}{0.4pt}\\
+expand upon methods shown in validation paper\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf NEAT tunnel}
+\vspace{-.5cm}
+\newline
+\noindent\rule{8cm}{0.4pt}\\
+-details the development and validation of tunnel.
+Pull from validation paper.\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\bf Thermal Pulsatile Flow}
+\vspace{-.5cm}
+\newline
+\noindent\rule{8cm}{0.4pt}\\
+pulsatile flow
+\begin{itemize}
+\item velocity field
+\item thermal field
+\end{itemize}
+
+
+
+\end{document}
