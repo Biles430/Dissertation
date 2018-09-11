@@ -4,9 +4,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experimental Facility}
 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=.45]{figures/facility/tunnel_v7.png}
+\caption{Schematic of the experimental facility. Air enters the facility from right-to-left. The primary components include: (1) freestream heaters, 
+(2) seeding manifold, (3) turbulence management section, (4) contraction, (5) thermal wall-plate located on the bottom wall of the test-section, (6) rotor-stator assembly, (7) diffuser, (8) centrifugal fan.}
+\label{fig:tunnel}
+\end{figure}
+
 The NEAT boundary layer wind tunnel is an open-circuit in-draft type designed to study heat transfer in non-equilibrium boundary layers. Figure ~\ref{fig:tunnel} shows the design schematic for the facility. The key design component is the thermal wall plate used to control the lower-wall thermal boundary conditions seen by the flow. 
 
-%\begin{figure}[t!]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{General Description}
+%provide back to front overview of tunnel, then pull each piece and describe in more detail
+The inlet section to the tunnel consists of a feed-back controlled resistive heater bank, a seeding manifold, a turbulent management section and a 4:1 contraction. 
+The test-section of the tunnel nominally measures 303mm $\times$ 111mm cross-section and 2.75m in length and is made of plexiglass to allow optical access.
+Removable windows in the top wall of the tunnel sit at 45, 136.3, and 251.8 cm from the test section inlet which allow for the introduction of probes, laser light, or IR measurements into the tunnel test section 
+A feed-back controlled thermal wall-plate sits on the floor of the test section and is used to control the lower-wall temperature seen by the flow. 
+The leading edge of the thermal wall-plate is a super-ellipse designed to prevent flow separation \cite{R.Narasimha1994}. 
+The upper wall of the test-section is angled at 0.23$^\circ$ to closely maintain a ZPG condition along the length of the test-section. 
+Downstream of the test-section is a pulsatile flow generator used to produce a sinusoidal pressure gradient, creating a non-equilibrium flow condition. 
+The diffuser transitions the flow area from a rectangular to a circular cross-section where it connects to a belt driven centrifugal fan.  
+A frequency controller is used to control and maintain the fan speed and corresponding flow speed in the test-section. 
+The freestream velocity in the test-section can vary between 1 and 12$ms^{-1}$. 
+The entire tunnel sits on a custom frame which has leveling adjustments in the x and z direction such that the tunnel floor sits flat when compared to the optical table adjacent. 
+This then orients the x-y plane of the tunnel to match that of the optical table for accurate optical measurements.
+Custom optical boards line the streamwise length of the tunnel for ease of experimental setup.
+The entire frame then sits on damping feet which isolate the tunnel from any ambient vibrations in the room.
+In the following subsections,  the components of the facility are described in detail.
+
+%\begin{figure}[h!]
 %  \begin{center}
 %  {\subfigcapskip = -20pt \subfigcapmargin = -12pt \subfigure[]{\label{fig:edge-a}\includegraphics[scale=0.5]{figures/facility/wallplate_SW.png}}}
 %   {\subfigcapskip = -20pt \subfigcapmargin = -12pt  \subfigure[]{\label{fig:edge-b}\includegraphics[scale=0.4]{figures/facility/plate_setup_sketch_v5.png}}}
@@ -15,35 +42,53 @@ The NEAT boundary layer wind tunnel is an open-circuit in-draft type designed to
 %\label{fig:wallplate}
 %\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{General Description}
-
-The inlet section to the tunnel consists of a feed-back controlled resistive heater bank, a seeding manifold, a turbulent management section and a 4:1 contraction. The test-section of the tunnel nominally measures 303mm $\times$ 111mm cross-section and 2.75m in length and is made of plexiglass to allow optical access. Three BK7 glass window inserts of size 254mm $\times$ 102mm on the top wall of the test-section and located at approximately 45, 136.3, and 251.8cm from the test-section inlet are used for introduction of laser light and for infrared (IR) imaging. The optical quality of the glass inserts are better than the plexiglass walls and necessary for IR imaging. A feed-back controlled thermal wall-plate sits on the floor of the test section and is used to control the lower-wall temperature seen by the flow. The leading edge of the thermal wall-plate is a super-ellipse designed to prevent flow separation \cite{R.Narasimha1994}. The upper wall of the test-section is angled at 0.23$^\circ$ to closely maintain a ZPG condition along the length of the test-section. Downstream of the test-section is a rotor-stator assembly used to produce a sinusoidal pressure gradient, creating a non-equilibrium flow condition. The diffuser transitions the flow area from a rectangular to a circular cross-section where it connects to a belt driven centrifugal fan.  A frequency controller is used to control and maintain the fan speed and corresponding flow speed in the test-section. The freestream velocity in the test-section can vary between 1 and 12$ms^{-1}$. In the following subsections,  the components of the facility are described in detail.
-
-\begin{figure*}[t!]
-\centering
-\includegraphics[scale=0.5]{figures/facility/rotor_stator.png}
-\caption{ \footnotesize Schematic of rotor-stator design, left shows the rotor, shown in the middle is the stator, and the right plot depicts a freestream velocity time series taken with a pitot-static tube for a quarter revolution of the rotor-stator mechanism.}
-\label{fig:rotor_stator}
-\end{figure*}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Inlet Section}
-Air entering the test-section first passes through an OMEGA Engineering air duct heater (model CABB-1211/208). The 3-phase 208V heater consists of nine sheathed finned chrome steel resistive heaters that provide 12 kW of power (with a power density of 4.03 W/cm$^2$). The cross-sectional area of the heater is 390.5mm $\times$ 358.8mm with an open area of 859.4 cm$^2$ (blockage of about 39\%). The three legs of the AC power are connected to the heater through a Watlow Din-A-Mite C silicone controller rectifier (SCR) power controller. A type J thermocouple placed in the freestream 1m downstream of the test-section inlet provides feedback for a proportional, integral, and derivative (PID) controller used as the input for the SCR power controller. The SCR power controller, configured for zero-voltage crossover firing (as opposed to phase angle crossover firing) to reduce electrical noise, is used to regulate the duty cycle of the voltage (either 0\% or 100\%) to the heaters thereby controlling the freestream temperature.  A SCR power controller was chosen (over a mechanical relay or solid state relay) as it is more suitable for handling the large current (33.4A) needed for the heater and has a fast response time of 5.56ms, which not only allows for a tightly controlled freestream temperature but also prolongs the life of the heating elements by reducing the thermal fatigue.
+%discuss heaters, seeder, turb managment, contraction
+Air entering the test-section first passes through an OMEGA Engineering air duct heater (model CABB-1211/208). 
+The 3-phase 208V heater consists of nine sheathed finned chrome steel resistive heaters that provide 12 kW of power (with a power density of 4.03 W/cm$^2$). 
+The cross-sectional area of the heater is 390.5mm $\times$ 358.8mm with an open area of 859.4 cm$^2$ (blockage of about 39\%). 
+The three legs of the AC power are connected to the heater through a Watlow Din-A-Mite C silicone controller rectifier (SCR) power controller. 
+A type J thermocouple placed in the freestream 1m downstream of the test-section inlet provides feedback for a proportional, integral, and derivative (PID) controller used as the input for the SCR power controller. 
+The SCR power controller, configured for zero-voltage crossover firing (as opposed to phase angle crossover firing) to reduce electrical noise, is used to regulate the duty cycle of the voltage (either 0\% or 100\%) to the heaters thereby controlling the freestream temperature. 
+A SCR power controller was chosen (over a mechanical relay or solid state relay) as it is more suitable for handling the large current (33.4A) needed for the heater and has a fast response time of 5.56ms, which not only allows for a tightly controlled freestream temperature but also prolongs the life of the heating elements by reducing the thermal fatigue.
 
-The PID controller gains are optimized for varying freestream velocity and temperature conditions, as one set of gain values does not work well over a large operating range. This is achieved using the autotune feature of the SCR power controller-PID feedback system. The ability of the system to hold a freestream set point temperature is shown in Fig.~\ref{fig:inlet}(a). 
+The PID controller gains are optimized for varying freestream velocity and temperature conditions, as one set of gain values does not work well over a large operating range. 
+This is achieved using the autotune feature of the SCR power controller-PID feedback system. 
+The ability of the system to hold a freestream set point temperature is shown in Fig.~\ref{fig:inlet}(a). 
 
-After exiting the heater, the air flow passes through a honeycomb-type seeding manifold to introduce (if desired) tracer particles into the flow to be used for particle image velocimetry (PIV). The challenge with seeding an open-circuit wind tunnel is that the flow tracers must be uniformly distributed into the flow at the source. This is much more difficult than seeding a closed-circuit wind tunnel where the seed can be allowed to circulate through the facility to produce a uniform seed concentration. The custom designed seeding manifold is shown in Fig.~\ref{fig:inlet}(b). The inlet air flows across the manifold through 248 PVC tubes of length 38.1mm and diameter 21.34mm. Four slots of 25.4mm length and 6.35mm width separated by 90$^\circ$ (center-to-center) are cut into each PVC tube. The plenum volume of the seeding manifold is filled with a dense fog of nominal 1$\mu$m  diameter oil droplets \cite{Shakerin1995} through up to twenty-three 21.34mm diameter pipes mounted around the perimeter of the seeder connected to a ROSCO 1700 fogger. The fog is drawn into the PVC inlet air piping through the four slots owing to the pressure difference between the fog in the plenum and the air in the PVC tubes. The open area percentage of the manifold (56.5\%) is comparable to the open area of the freestream heater (61\%). Next, the air passes through a turbulence management section containing 4 screens of decreasing mesh size and honeycomb. The screens reduce axial turbulence while the honeycomb reduces lateral turbulence. The air flow then proceeds through a 4:1 contraction to speed up the flow and to further reduce turbulent intensities.
+After exiting the heater, the air flow passes through a honeycomb-type seeding manifold to introduce (if desired) tracer particles into the flow to be used for particle image velocimetry (PIV).
+The challenge with seeding an open-circuit wind tunnel is that the flow tracers must be uniformly distributed into the flow at the source. 
+This is much more difficult than seeding a closed-circuit wind tunnel where the seed can be allowed to circulate through the facility to produce a uniform seed concentration. 
+The custom designed seeding manifold is shown in Fig.~\ref{fig:inlet}(b). 
+The inlet air flows across the manifold through 248 PVC tubes of length 38.1mm and diameter 21.34mm. 
+Four slots of 25.4mm length and 6.35mm width separated by 90$^\circ$ (center-to-center) are cut into each PVC tube. 
+The plenum volume of the seeding manifold is filled with a dense fog of nominal 1$\mu$m  diameter oil droplets \cite{Shakerin1995} through up to twenty-three 21.34mm diameter pipes mounted around the perimeter of the seeder connected to a ROSCO 1700 fogger. 
+The fog is drawn into the PVC inlet air piping through the four slots owing to the pressure difference between the fog in the plenum and the air in the PVC tubes. 
+The open area percentage of the manifold (56.5\%) is comparable to the open area of the freestream heater (61\%). 
+Detailed drawings of the seeding manifold can be found in App.~\ref{sec:designdraw}.
+
+The air then passes through a turbulence management section containing 4 screens of decreasing wire mesh size and then a honeycomb section.
+The screens reduce axial turbulence while the honeycomb reduces lateral turbulence.
+The air flow then proceeds through a 4:1 contraction to speed up the flow and to further reduce turbulent intensities.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Test Section}
+%discuss trip, window design, 
+Three BK7 glass window inserts of size 254mm $\times$ 102mm on the top wall of the test-section and located at approximately 45, 136.3, and 251.8cm from the test-section inlet are used for introduction of laser light and for infrared (IR) imaging. 
+The optical quality of the glass inserts are better than the plexiglass walls and necessary for IR imaging.
+The glass inserts can be replaced with poly-carbonate inserts which have been custom built to fit a variety of probes into the tunnel.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Thermal wall-plate}
-
+%discuss prototype design, manufacturing, final design
+%include drawings in appendix (ref=sec:designdraw)
 The thermal wall-plate (shown in Fig.~\ref{fig:wallplate}) comprises of twelve sections each independently heated and controlled. The design is modeled after the work of Blackwell, Kays, and Moffat \cite{Blackwell_1972}. Each section consists of a 9.5mm thick aluminum 6061 plate, Kapton polyimide-fllm resistive resistive heaters (affixed to the bottom of the aluminum plate) with a heating density of 1.5W/cm$^2$, and a 5mm thick calcium silicate holder used for thermal isolation of the aluminum plate. (The thermal conductivity of the calcium silicate is four-orders of magnitude less the aluminum 6061.) Three evenly spaced J-type thermocouples arranged spanwise in the center of each plate and embedded 2.5mm beneath the top surface of each aluminum plate are used to monitor wall temperature for feedback control of wall heating. The section components sit in a Delrin (acetal) frame, chosen for its low thermal conductivity and machinability. The streamwise (flow direction) length of each section increases with downstream position such that the convective heat transfer from plate-to-plate does not vary by more than a suitably chosen threshold of 15\%. This threshold is set by examining the smallest feasibly manufacturable streamwise plate length of the most upstream plate, as this is where the heat flux changes most rapidly. The length of the plates are summarized in Table~\ref{tab:plate}. To investigate turbulent boundary layers, a 3mm diameter trip rod extending the spanwise extent of the test-section is placed on the rear of the leading-edge nose, just upstream of the first convective plate. The rod induces transition to turbulence and fixes (on average) the starting location of a developing turbulent boundary layer.
 
 \begin{table}[h] 
 \centering
 \caption{\indent The length of the convective plates. Plate 1 is at the upstream end and plate 12 is at the downstream end of the wind tunnel.}
-\resizebox{\columnwidth}{!}{%
+%\resizebox{\columnwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
 	\hline
 	 Plate number& Length (mm) & Plate number& Length (mm)\\ \hline
@@ -51,7 +96,7 @@ The thermal wall-plate (shown in Fig.~\ref{fig:wallplate}) comprises of twelve s
 	6, 7, 8 & 175 & 9, 10 & 275 \\ \hline
 	11 & 325 & 12 & 425 \\ \hline                                                       
 \end{tabular}
-}
+%}
 \label{tab:plate}
 \end{table}
 
@@ -66,12 +111,21 @@ The temperature of each section of the thermal wall-plate is monitored and maint
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Rotor-Stator Assembly}
+\subsection{Pulsatile Flow Generator}
+%discuss first design, outcomes and then second design
+
 A rotor-stator assembly located downstream of the test-section is used to generate a periodic pressure gradient used to produce a pulsatile freestream velocity in the tunnel. Pulsatile flows are periodic and unidirectional characterized by both their frequency and amplitude. The flow over a half-period first accelerates to maximum velocity then decelerates to the mean velocity. During the next half-period, the flow first decelerates to minimum velocity then accelerates to the mean velocity.
 In a pulsatile boundary layer flow, the acceleration/deceleration of the freestream velocity  produces non-equilbrium flow behaviors. In particular, when the oscillation period is comparable to (or smaller than) the turbulence relaxation time (order $100 \nu / u_\tau^2$, \cite{Peters1993}), there will be a phase difference between the oscillating strain and stress field \cite{Weng2016}. 
 
 The design of the rotor-stator shown in Fig.~\ref{fig:rotor_stator}. is modeled after the design of K.Al-Asmi \textit{et al.} \cite{K.Al-Asmi1993}.
-It consists of a rotor with 4 uniformly spaced holes, and a stator with 4 matching slots. The open area to the incoming flow is continuously modulated which produces a smooth sinusoidal freestream velocity signal as shown in Fig.~\ref{fig:rotor_stator}(c). The rotor frequency is controlled via a DC motor with variable speed settings from 1-100Hz. Twelve air-bleed slots arranged on the stator control the ratio of fluctuating area to open area. The slots ensure the existence of a mean flow and by changing the ratio of fluctuating area to mean through area the pulsatile flow amplitude can be adjusted. In the present design, this area ratio can be adjusted from 40$\%$ to 100$\%$. The rotor-stator assembly was mounted downstream of the test section to reduce the effect of induced rotational flow within the test-section. The assembly can be easily removed if a pulsatile flow is not desired. 
+It consists of a rotor with 4 uniformly spaced holes, and a stator with 4 matching slots. The open area to the incoming flow is continuously modulated which produces a smooth sinusoidal freestream velocity signal as shown in Fig.~\ref{fig:rotor_stator}(c). The rotor frequency is controlled via a DC motor with variable speed settings from 1-100Hz. Twelve air-bleed slots arranged on the stator control the ratio of fluctuating area to open area. The slots ensure the existence of a mean flow and by changing the ratio of fluctuating area to mean through area the pulsatile flow amplitude can be adjusted. In the present design, this area ratio can be adjusted from 40$\%$ to 100$\%$. The rotor-stator assembly was mounted downstream of the test section to reduce the effect of induced rotational flow within the test-section. The assembly can be easily removed if a pulsatile flow is not desired.
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{figures/facility/rotor_stator.png}
+\caption{ \footnotesize Schematic of rotor-stator design, left shows the rotor, shown in the middle is the stator, and the right plot depicts a freestream velocity time series taken with a pitot-static tube for a quarter revolution of the rotor-stator mechanism.}
+\label{fig:rotor_stator}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

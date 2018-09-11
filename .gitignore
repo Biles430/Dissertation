@@ -6,4 +6,7 @@
 *.lot
 *.out
 *.nlo
-
+*.log
+*.toc
+*.zip
+*.gz
