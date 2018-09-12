@@ -27,10 +27,7 @@ Downstream of the test-section is a pulsatile flow generator used to produce a s
 The diffuser transitions the flow area from a rectangular to a circular cross-section where it connects to a belt driven centrifugal fan.  
 A frequency controller is used to control and maintain the fan speed and corresponding flow speed in the test-section. 
 The freestream velocity in the test-section can vary between 1 and 12$ms^{-1}$. 
-The entire tunnel sits on a custom frame which has leveling adjustments in the x and z direction such that the tunnel floor sits flat when compared to the optical table adjacent. 
-This then orients the x-y plane of the tunnel to match that of the optical table for accurate optical measurements.
-Custom optical boards line the streamwise length of the tunnel for ease of experimental setup.
-The entire frame then sits on damping feet which isolate the tunnel from any ambient vibrations in the room.
+The entire tunnel sits on a custom frame which levels and isolates the tunnel test-section.
 In the following subsections,  the components of the facility are described in detail.
 
 %\begin{figure}[h!]
@@ -45,6 +42,9 @@ In the following subsections,  the components of the facility are described in d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Inlet Section}
 %discuss heaters, seeder, turb managment, contraction
+%Heater%
+{\bf figure of breakdown of inlet section}\\
+
 Air entering the test-section first passes through an OMEGA Engineering air duct heater (model CABB-1211/208). 
 The 3-phase 208V heater consists of nine sheathed finned chrome steel resistive heaters that provide 12 kW of power (with a power density of 4.03 W/cm$^2$). 
 The cross-sectional area of the heater is 390.5mm $\times$ 358.8mm with an open area of 859.4 cm$^2$ (blockage of about 39\%). 
@@ -56,7 +56,7 @@ A SCR power controller was chosen (over a mechanical relay or solid state relay)
 The PID controller gains are optimized for varying freestream velocity and temperature conditions, as one set of gain values does not work well over a large operating range. 
 This is achieved using the autotune feature of the SCR power controller-PID feedback system. 
 The ability of the system to hold a freestream set point temperature is shown in Fig.~\ref{fig:inlet}(a). 
-
+%Seeder%
 After exiting the heater, the air flow passes through a honeycomb-type seeding manifold to introduce (if desired) tracer particles into the flow to be used for particle image velocimetry (PIV).
 The challenge with seeding an open-circuit wind tunnel is that the flow tracers must be uniformly distributed into the flow at the source. 
 This is much more difficult than seeding a closed-circuit wind tunnel where the seed can be allowed to circulate through the facility to produce a uniform seed concentration. 
@@ -66,24 +66,70 @@ Four slots of 25.4mm length and 6.35mm width separated by 90$^\circ$ (center-to-
 The plenum volume of the seeding manifold is filled with a dense fog of nominal 1$\mu$m  diameter oil droplets \cite{Shakerin1995} through up to twenty-three 21.34mm diameter pipes mounted around the perimeter of the seeder connected to a ROSCO 1700 fogger. 
 The fog is drawn into the PVC inlet air piping through the four slots owing to the pressure difference between the fog in the plenum and the air in the PVC tubes. 
 The open area percentage of the manifold (56.5\%) is comparable to the open area of the freestream heater (61\%). 
-Detailed drawings of the seeding manifold can be found in App.~\ref{sec:designdraw}.
-
+Detailed drawings of the seeding manifold can be found in App.~\ref{sec:draw}.
+%Turb Management-contraction%
+%drawings on contraction? any more info to add?
 The air then passes through a turbulence management section containing 4 screens of decreasing wire mesh size and then a honeycomb section.
 The screens reduce axial turbulence while the honeycomb reduces lateral turbulence.
 The air flow then proceeds through a 4:1 contraction to speed up the flow and to further reduce turbulent intensities.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Test Section}
-%discuss trip, window design, 
-Three BK7 glass window inserts of size 254mm $\times$ 102mm on the top wall of the test-section and located at approximately 45, 136.3, and 251.8cm from the test-section inlet are used for introduction of laser light and for infrared (IR) imaging. 
+%discuss trip, window design, tunnel frame
+%Trip
+{\bf figure of test section with dimmensions}\\
+
+To investigate turbulent boundary layers, a 3mm diameter trip rod extending the spanwise extent of the test-section is placed on the rear of the leading-edge nose, just upstream of the first convective plate.
+The rod induces transition to turbulence and fixes (on average) the starting location of a developing turbulent boundary layer.
+A range of trip diameters as well as shape were tested to determine the smallest diameter which would lead to a steady (on average) transisition. 
+An undersized trip does not induce enough energy and the flow can relax back to a laminar state, while too large of a trip produces near wall effects which do not decay in an appropriate range \cite{Marusic2015}.
+Wall normal velocity profiles taken at the first measurement location verified the appropriate trip diameter by comparing mean profiles as the recovery length does not depend on the order of the statistic measured \cite{Marusic2015}.
+
+%Window Inserts%
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=.45]{figures/facility/tunnelwindows.png}
+\caption{Schematic of removable windows which allow for optical measurements and installation of temperature/velocity probes. Design was developed by Dr. Michael Allard}
+\label{fig:tunnelWindow}
+\end{figure}
+
+Three windows of size 254mm $\times$ 102mm sit in the top wall of the test-section located at approximately 45, 136.3, and 251.8cm from the test-section inlet.
+The windows are used for introduction of laser light, for infrared (IR) imaging and for inserting various measurement probes.
+The window body, seen in Fig.~\ref{fig:tunnelWindow}, contains 4 leveling screws such that window can be set flush with the inside wall of the tunnel.
+Window inserts made from either BK7 glass of clear poly-carbonate can be installed depending on the requirement.
 The optical quality of the glass inserts are better than the plexiglass walls and necessary for IR imaging.
-The glass inserts can be replaced with poly-carbonate inserts which have been custom built to fit a variety of probes into the tunnel.
+%tunnel frame
+The tunnel frame, which supports the working section of the tunnel, has leveling adjustments in the x and z direction such that the tunnel floor sits parallel to the adjacent optics table. 
+This then orients the x-y plane of the tunnel and any optical equipment mounted to the optical table.
+Custom optics mounting boards line the streamwise length of the tunnel for ease of experimental setup.
+The entire frame sits on damping feet which isolate the tunnel from any ambient vibrations in the room.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Thermal wall-plate}
 %discuss prototype design, manufacturing, final design
 %include drawings in appendix (ref=sec:designdraw)
-The thermal wall-plate (shown in Fig.~\ref{fig:wallplate}) comprises of twelve sections each independently heated and controlled. The design is modeled after the work of Blackwell, Kays, and Moffat \cite{Blackwell_1972}. Each section consists of a 9.5mm thick aluminum 6061 plate, Kapton polyimide-fllm resistive resistive heaters (affixed to the bottom of the aluminum plate) with a heating density of 1.5W/cm$^2$, and a 5mm thick calcium silicate holder used for thermal isolation of the aluminum plate. (The thermal conductivity of the calcium silicate is four-orders of magnitude less the aluminum 6061.) Three evenly spaced J-type thermocouples arranged spanwise in the center of each plate and embedded 2.5mm beneath the top surface of each aluminum plate are used to monitor wall temperature for feedback control of wall heating. The section components sit in a Delrin (acetal) frame, chosen for its low thermal conductivity and machinability. The streamwise (flow direction) length of each section increases with downstream position such that the convective heat transfer from plate-to-plate does not vary by more than a suitably chosen threshold of 15\%. This threshold is set by examining the smallest feasibly manufacturable streamwise plate length of the most upstream plate, as this is where the heat flux changes most rapidly. The length of the plates are summarized in Table~\ref{tab:plate}. To investigate turbulent boundary layers, a 3mm diameter trip rod extending the spanwise extent of the test-section is placed on the rear of the leading-edge nose, just upstream of the first convective plate. The rod induces transition to turbulence and fixes (on average) the starting location of a developing turbulent boundary layer.
+The thermal wall plate covers the bottom floor of the NEAT test section and controls the bottom wall boundary condition by setting $T_{wall}$.
+The design is modeled after the work of Blackwell et al. \cite{Blackwell1972}.
+The base design consists of a thermal mass which is heated and maintained at a set temperature.
+The main design condition was that the system must be able to maintain a set wall temperature independent of the above flow state (i.e. 2-D varying wall heat flux).
+Other design constraints were to minimize the height of the system so as to reduce blockage effects; minimize conductive heat loss from the thermal mass so as to ensure all heat was going into convective transfer; and to design a system which could be manufactured in house and installed with ease into the NEAT tunnel.
+
+For prototype development a different open circuit down draft wind tunnel was used as it had a smaller development length and had a greater ease of access to the working section.
+The working section of the tunnel is 18" x 18" x 26" (z by y by x).
+To account for the streamwise variation in heat flux (coming from a developing boundary layer) the prototype design consisted of two thermal masses with increasing streamwise length based on downstream location.
+This also assisted in ease of manufacturing as the parts could then fit within the working area of the UNH machine shop.\\
+
+{\bf figure of prototype}\\
+
+Fig.~\ref{fig:prototypeSW} shows the solid model design of the prototype thermal wall plate.
+The thermal mass is made up of an aluminum 6061 plate which is 0.675" thick (CHECK THIS).
+For heating the Al plate, there is an array of Kapton polyimide-fllm resistive resistive heaters (affixed to the bottom of the aluminum plate) with a heating density of 1.5W/cm$^2$.
+In between the heaters there are a series of holes which contain J-type thermocouples, which then sit 2.5mm beneath the surface of the plate and act in a feed back loop to control the thermal mass temperature.
+
+{\bf CURRENT POSITION}\\
+
+The thermal wall-plate (shown in Fig.~\ref{fig:wallplate}) comprises of twelve sections each independently heated and controlled. The design is modeled after the work of Blackwell, Kays, and Moffat \cite{Blackwell_1972}. Each section consists of a 9.5mm thick aluminum 6061 plate, Kapton polyimide-fllm resistive resistive heaters (affixed to the bottom of the aluminum plate) with a heating density of 1.5W/cm$^2$, and a 5mm thick calcium silicate holder used for thermal isolation of the aluminum plate. (The thermal conductivity of the calcium silicate is four-orders of magnitude less the aluminum 6061.) Three evenly spaced J-type thermocouples arranged spanwise in the center of each plate and embedded 2.5mm beneath the top surface of each aluminum plate are used to monitor wall temperature for feedback control of wall heating. The section components sit in a Delrin (acetal) frame, chosen for its low thermal conductivity and machinability. The streamwise (flow direction) length of each section increases with downstream position such that the convective heat transfer from plate-to-plate does not vary by more than a suitably chosen threshold of 15\%. This threshold is set by examining the smallest feasibly manufacturable streamwise plate length of the most upstream plate, as this is where the heat flux changes most rapidly. The length of the plates are summarized in Table~\ref{tab:plate}. 
 
 \begin{table}[h] 
 \centering
@@ -140,19 +186,7 @@ The thermal wall plate is validated for three test cases: nominal ZPG turbulent 
 %\label{fig:IR-ZPG}
 %\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Measurement Methods}
-The temperature of the thermal wall plate and the spatial uniformity of temperature are evaluated using a FLIR SC645 IR camera and J-type thermocouples embedded 2.5mm beneath the top surface of each aluminum plate. The spectral range of the camera is 7.5-13 $\mu m$. The camera resolution is 640 pixel $\times$ 480 pixel and the measurement uncertainty is $\pm$ 2\% of the measured temperature. The measurement uncertainty of the J-type thermocouples is 0.01$^o$C as determined from examining the standard deviation of long time series collected at fixed temperatures. 
 
-The wall-normal profile of temperature within the thermal boundary layer is performed using a sting-mounted type J fine-wire thermocouple with a probe diameter of $0.65mm$ attached to a Velmex BiSlide traverse with a step resolution of 5 $\mu m$.  A Titan Tool Supply Co. Titan Measuring A-1 Microscope-Telescope cathetometer, with an accuracy of $\pm$ 64 $\mu m$ was used to locate the thermocouple position relative to the surface of the thermal wall plate. 
-PIV was used to acquire planar fields of velocity in the streamwise/wall-normal plane (i.e., xy-plane in the chosen
-experimental coordinate system). %A schematic of the present experimental setup is shown in Fig. xxxx.  
-Light is provided by a Photonics DM-series dual cavity Nd:YLF laser capable of 30mJ per pulse. A periscope and a 90$^o$ turning mirror is used to direct the laser light into the tunnel test section. Sheet forming optics (cylindrical and spherical lenses) placed prior to the turning mirror are used to form a laser sheet on the order 1mm thick. The laser light is scattered by atomized oil droplets of 1$\mu m$ nominal diameter introduced into the flow in the seeding manifold upstream of the test-section inlet. Images of the laser light scattered off the tracer particles perpendicular to the incident laser sheets are acquired using two 12-bit Photron FASTCAM SA4 CMOS cameras. 
-
-The CMOS array size of each camera is 1024 pixel $\times$ 1024 pixel. The two cameras are placed on opposite sides of the tunnel and image the same plane but with different field-of-views (FOV). This is done to achieve high spatial resolution in the near wall region while still imaging the entire boundary layer. Camera 1 has a FOV ranging from 2mm $< y <$ 26mm and camera 2 has a FOV ranging from 5mm $< y <$ 54mm, where $y$=0 is the bottom wall. 
-
-The PIV images were acquired at $3.6 kHz$ with a spatial resolution of $0.4\mu m$ per pixel and analyzed using LaVision PIV software, DaVis 8.0.6 and DaVis 8.3.1. Cross-correlation algorithms between two successive images are used to determine the particle displacement field and the time separation between the images is used to determine the velocity field from the displacement field.
- 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{ZPG turbulent boundary layer flow over an isothermal wall plate}
 The freestream temperature  of the air in the tunnel is set to 25$^\circ$C and each section of the thermal wall plate is set to 40$^\circ$C. Measurements are acquired at five different momentum thickness Reynolds numbers, $Re_\theta$, as listed in Table~\ref{tab:temp}. The freestream velocity is steady with magnitudes varying between 2--10 ms$^{-1}$. The FLIR SC645 IR camera is positioned above plate \#5 located 0.8m downstream of the trip and the FOV is 85mm $\times$ 64mm in the spanwise and streamwise directions, respectively. The temperature of the convective plate was evaluated by ensemble-averaging 100 IR images acquired at 16Hz to reduce pixel-noise. The effect of averaging over shorter or longer periods showed no statistical difference between the results.
