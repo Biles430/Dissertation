@@ -9,6 +9,23 @@ Boundary layer thickness, \\
 \section{Reynolds Analogy}
 -Detail how BL work is imposed onto the velocity field and show the similarities between the two field transport equations.
 Discuss Reynolds analogy, \\
+\nomenclature[z]{$St_T$}{Stanton number for an incompressible boundary layer flow over an isothermal plate}
+
+Here 
+
+\begin{equation}
+\Theta = \frac{T_w - T(y)}{T_w - T_\infty},
+\end{equation}
+
+\noindent where $T_\infty$ denotes the freestream temperature. The inner normalization is described in Eq.~\ref{eq:lawofwallT}. The value of the wall heat flux needed for the inner-normalization was approximated using Colburns formulation given by 
+
+\begin{equation}
+St_T = \frac{q''_w}{\rho c_p U_\infty (T_{w} - T_\infty)} = Pr^{-2/3} \left(\frac{u_\tau}{U_\infty}\right)^2 
+%q_w = \rho c_p U_\infty Pr^{-2/3} (T_{wall} - T_\infty)\left(\frac{u_\tau}{U_\infty}\right)^2 
+\label{eq:qw}
+\end{equation}
+
+\noindent where 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Non-equilibrium Flow}
