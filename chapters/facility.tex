@@ -118,7 +118,7 @@ Other design constraints were to minimize the height of the system so as to redu
 
 For prototype development a different open circuit down draft wind tunnel was used as it had a smaller development length and had a greater ease of access to the working section.
 The working section of the tunnel is 0.45m x 0.45m x 0.66m (z by y by x).
-To account for the streamwise variation in heat flux (coming from a developing boundary layer) the prototype design consisted of two thermal masses with increasing streamwise length based on downstream location.
+To account for the streamwise variation in heat flux (coming from a developing boundary layer) the prototype design consisted of two convective plates with increasing streamwise length based on downstream location.
 This also assisted in ease of manufacturing as the parts could then fit within the working area of the UNH machine shop.\\
 
 \begin{figure}[h!]
@@ -129,9 +129,9 @@ This also assisted in ease of manufacturing as the parts could then fit within t
 \end{figure}
 
 Fig.~\ref{fig:prototype} shows the solid model design of the prototype thermal wall plate.
-The thermal mass is an aluminum 6061 plate which is 0.675" thick (CHECK THIS).
+The convective plate is an aluminum 6061 plate which is 9.5mm thick.
 For heating the Al plate, there is an array of Kapton polyimide-fllm resistive resistive heaters (affixed to the bottom of the aluminum plate) with a heating density of 1.5W/cm$^2$.
-In between the heaters there are a series of holes which contain J-type thermocouples, which then sit 2.5mm beneath the surface of the plate and act in a feed back loop to control the thermal mass temperature.
+In between the heaters there are a series of holes which contain J-type thermocouples, which then sit 2.5mm beneath the surface of the plate and act in a feed back loop to control the convective plate temperature.
 Each Al plate sits into a custom machined section of insulation made from calcium-silicate.
 Each of the insulated wall plates then sit into a frame manufactured from Delrin which sets the spacing of each plate, and was chosen for its low thermal conductivity and machinability.
 Due to the desire of producing high quality physics grade boundary layers a leading edge nose was developing to smoothly transition the flow onto the thermal wallplate.
@@ -169,7 +169,7 @@ The final thermal wall-plate (shown in Fig.~\ref{fig:wallplate}) comprises of tw
 Each section consists of a 9.5mm thick aluminum 6061 plate, Kapton polyimide-fllm resistive resistive heaters (affixed to the bottom of the aluminum plate) with a heating density of 1.5W/cm$^2$, and a 5mm thick calcium silicate holder used for thermal isolation of the aluminum plate (the thermal conductivity of the calcium silicate is four-orders of magnitude less the aluminum 6061).
 Three evenly spaced J-type thermocouples arranged spanwise in the center of each plate and embedded 2.5mm beneath the top surface of each aluminum plate are used to monitor wall temperature for feedback control of wall heating. 
 To increase ease of assembly and repair a thermocouple holder was designed to maintain the position of each thermocouple throughout assembly and operation.
-To ensure each thermocouple had adequate contact with the thermal mass each thermocouple hole was filled with a silver grease compound which is thermally conductive and electrically insulative.
+To ensure each thermocouple had adequate contact with the convective plate, each thermocouple hole was filled with a silver grease compound which is thermally conductive and electrically insulative.
 The section components sit in a Delrin (acetal) frame, which incorporates a method of leveling each section indivdually such that the overall surface roughness of the assembly can be reduced.
 The streamwise (flow direction) length of each section increases with downstream position such that the convective heat transfer from plate-to-plate does not vary by more than a suitably chosen threshold of 15\%.
 This threshold is set by examining the smallest feasibly manufacturable streamwise plate length of the most upstream plate, as this is where the heat flux changes most rapidly. 
@@ -190,10 +190,12 @@ The length of the plates are summarized in Table~\ref{tab:plate}.
 \label{tab:plate}
 \end{table}
 
+For ease of manufacturing the streamwise length of the plates stayed consistent for 2-3 adjacent plates.
+This made for the manufacturing of similar components which sped up the process and kept the streamwise length of progressing plates smaller which assist with better boundary condition control.
 The entire wall plate system was design in a manor such that it could be assembled/disassembled with only one person. 
 Interlocking frame sections are custom fit to within -.127 +0 mm of the tunnel width such that the system can be assembled plate by plate and slid into the tunnel from the inlet.
 Routed wires for heater power and thermocouple output are fed out of bottom windows which match the position of the top windows.
-Details about the individual wall-plate components are the assembly process are listed in App.~\ref{sec:components}.
+Detailed descriptions and drawings of the individual wall-plate components as well as description of the assembly and installation process can be found in App.~\ref{sec:NEATcomponents}.
 
 \begin{figure}[h!]
   \begin{center}
@@ -209,7 +211,8 @@ LabVIEW is used to define and implement the controller settings. Each controller
 The average temperature of the three embedded thermocouples in each convective plate serves as the feedback parameter to direct the SCR to block/pass the 110 VAC that powers the resistive heaters (effectively the SCR serves as a switch to quickly turn the heaters on/off). 
 The time constant of the controller is significantly smaller than the time constant of any given convective plate so the controller can monitor and adjust the heat-input to the convective plate much faster than the plate can lose (gain) heat to (from) the flow. 
 The operating plate temperature range is 20$^\circ$C to 65$^\circ$C which is set by the working temperature of the materials used.
-The controller is able to set and maintain a temperature to within 0.5$^\circ$C as determined from the variance of the embedded thermocouples during testing. 
+The controller is able to set and maintain a temperature of the system to within 0.5$^\circ$C as determined from the variance of the embedded thermocouples during testing. 
+Details on the controller design and operation can be found in the thesis of Dr. Alireza Ebadi \cite{Ebadi2016}.
 Importantly, since the temperature of each section of the thermal wall plate is independently controlled, the design allows for the application of a wide-range of thermal boundary conditions: e.g., isothermal, streamwise temperature gradient, discrete temperature steps, among others.
 
 \begin{figure}[h!]
@@ -224,15 +227,14 @@ Importantly, since the temperature of each section of the thermal wall plate is 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Pulsatile Flow Generator}
 %discuss first design, outcomes and then second design
-
-\subsection{Rotor-Stator Assembly}
-A rotor-stator assembly located downstream of the test-section was the first design used to generate a periodic pressure gradient used to produce a pulsatile freestream velocity in the tunnel. 
 Pulsatile flows are periodic and unidirectional characterized by both their frequency and amplitude. 
 The flow over a half-period first accelerates to maximum velocity then decelerates to the mean velocity. 
 During the next half-period, the flow first decelerates to minimum velocity then accelerates to the mean velocity.
 In a pulsatile boundary layer flow, the acceleration/deceleration of the freestream velocity  produces non-equilbrium flow behaviors. 
 In particular, when the oscillation period is comparable to (or smaller than) the turbulence relaxation time (order $100 \nu / u_\tau^2$, \cite{Peters1993}), there will be a phase difference between the oscillating strain and stress field \cite{Weng2016}. 
 
+\subsection{Rotor-Stator Assembly}
+A rotor-stator assembly located downstream of the test-section was the first design used to generate a periodic pressure gradient used to produce a pulsatile freestream velocity in the tunnel. 
 The design of the rotor-stator shown in Fig.~\ref{fig:rotor_stator}. is modeled after the design of K.Al-Asmi \textit{et al.} \cite{K.Al-Asmi1993}.
 It consists of a rotor with 4 uniformly spaced holes, and a stator with 4 matching slots. 
 The open area to the incoming flow is continuously modulated which produces a smooth sinusoidal freestream velocity signal as shown in Fig.~\ref{fig:rotor_stator}(c). 
@@ -253,18 +255,18 @@ The assembly can be easily removed if a pulsatile flow is not desired.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Pulsatile Flow Generator}
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.6]{facility/pulsatileGenV1.png}
-\caption{ \footnotesize Schematic of pulsatile wave genorator with a paddle design. The left image displays the y-z plane with flow going into the board, where the right figure shows a cutaway image with paddle height $H_p$. $H_p$ can be adjusted for desired flow condition.}
+\caption{ \footnotesize Schematic of pulsatile wave genorator with a paddle design. The left image displays the y-z plane with flow going into the paper, the right figure shows a cutaway image of the x-y plane on the tunnel centerline (B-B). The paddle height $H_p$ can be adjusted to change the fluctuating area and therefore the pulsatile amplitude.}
 \label{fig:rotor_stator}
 \end{figure}
 
 The rotor-stator mechanism went through a re-design process due to the desire for a design with a lower blockage ratio which would then allow for testing of higher $Re$ flows.
-In {\bf XX et al.} a vertical array of spanwise orientated paddles were rotated to create a pulsatile pressure wave.
+In Karlsson \textit{et al.} a vertical array of spanwise orientated paddles were rotated to create a pulsatile pressure wave \cite{Karlsson1958}.
 These paddles would create a similar sinusoidal change in through area yet drastically reduce the blockage ratio.
 A similar design was developed to fit within the rotor-stator mechanism box which uses 1 paddle that mounts into bearings on each spanwise wall.
-The paddle spans the entire width of the tunnel and connects to a DC gear motor {\bf list exact motor} that sits outside the tunnel and operates in a feeback loop with an Arduino.
+The paddle spans the entire width of the tunnel and connects to a DC gear motor {\bf (list exact motor)} that sits outside the tunnel and operates in a feeback loop with an Arduino.
 Multiple paddles of varying heights can be installed to vary the fluctuating area.
-The blockage ratio is now reduced to 5\% and Re up to {\bf XX} can be reached.
+The blockage ratio is reduced to 5\% and Re up to {\bf XX} can be reached.
 
